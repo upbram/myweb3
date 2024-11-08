@@ -40,7 +40,7 @@ module.exports = async (req, res) => {
             res.status(200).json({ message: "Interest submitted successfully and appended to GitHub." }); // Send JSON response
         } catch (error) {
             console.error("Error updating GitHub file:", error.response ? error.response.data : error.message);
-            res.status(500).json({ message: "Error saving your interest to GitHub." }); // Send JSON response
+            res.status(500).json({ message: "Error saving your interest to GitHub.", error: error.message }); // Send JSON response with error details
         }
     } else {
         res.setHeader('Allow', ['POST']);
