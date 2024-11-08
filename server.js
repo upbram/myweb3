@@ -10,7 +10,7 @@ app.use(cors()); // Enable CORS for all routes
 app.use(express.json());
 
 // GitHub configuration
-const GITHUB_TOKEN = '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'; // Replace with your GitHub token
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // Access the token from environment variables 
 const GITHUB_REPO = 'upbram/myweb3'; // Replace with your GitHub username and repository name
 
 // POST route to handle form submissions
