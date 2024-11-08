@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC and Runes based DeFi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>DeFi with Bitcoin and Runes</h1>
+        <p>Explore these ideas and tell us your favorite!</p>
+    </header>
+
+    <div class="container">
+        <div class="project-grid">
+            <div class="project-card" onclick="selectProject('A')">
+                <h2>BTC-Backed Synthetic Asset Exchange</h2>
+                <p>Trade synthetic assets like rAAPL, rTSLA with Runes tokens.</p>
+            </div>
+            <div class="project-card" onclick="selectProject('B')">
+                <h2>BTC-Runes Prediction Market</h2>
+                <p>Predict and trade market trends with Runes.</p>
+            </div>
+            <div class="project-card" onclick="selectProject('C')">
+                <h2>Low-Cost to Buy/Sell Runes</h2>
+                <p>Reduce transactions cost to trade Runes.</p>
+            </div>
+            <div class="project-card" onclick="selectProject('D')">
+                <h2>BTC-Runes NFT Marketplace</h2>
+                <p>Trade NFTs with BTC Runes.</p>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <h3>Feedback</h3>
+            <p>Select a project, enter your email, and share your thoughts.</p>
+            <form id="interest-form" onsubmit="submitInterest(event)">
+                <select id="project-selection" class="input-field" required>
+                    <option value="">-- Select a Project --</option>
+                    <option value="A">BTC-Backed Synthetic Asset Exchange</option>
+                    <option value="B">BTC-Runes Prediction Market</option>
+                    <option value="C">Low-Cost Buy/Sell Runes</option>
+                    <option value="D">BTC Runes NFT Marketplace</option>
+                </select>
+                <input type="email" id="email" class="input-field" placeholder="Your Email" required>
+                <textarea id="pain-point" class="input-field" placeholder="Your feedback..." required></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
