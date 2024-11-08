@@ -1,0 +1,216 @@
+/* General font styling for light, thin, and smooth text */
+body {
+    font-family: 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: #E0E0E0;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main title styling */
+h1 {
+    font-size: 28px;
+    font-weight: 300;
+    color: #FFA500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Subtitle styling */
+.subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    color: #CCCCCC;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Card container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual card styling */
+.box {
+    background-color: #222222;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    margin: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #E0E0E0;
+    font-weight: 300;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: #333333;
+}
+
+/* Title styling inside each card */
+.box h3 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #FFA500;
+    margin-bottom: 10px;
+}
+
+/* Description styling inside each card */
+.box p {
+    font-size: 14px;
+    color: #CCCCCC;
+    line-height: 1.6;
+}
+
+/* Feedback section styling */
+.feedback {
+    font-size: 18px;
+    font-weight: 300;
+    color: #32CD32;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Input and select styling */
+input[type="text"],
+textarea,
+select {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #666666;
+    background-color: #1a1a1a;
+    color: #E0E0E0;
+    margin: 5px;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #FFA500;
+    color: #111111;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #ffb733;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #bdc3c7;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h2 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #34495e;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.form-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #ecf0f1;
+    border-radius: 8px;
+}
+
+.form-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.form-section p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
