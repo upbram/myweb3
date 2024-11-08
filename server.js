@@ -1,3 +1,4 @@
+require('dotenv').config(); // Load environment variables from .env file
 const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
@@ -12,6 +13,13 @@ app.use(express.json());
 // GitHub configuration
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // Access the token from environment variables 
 const GITHUB_REPO = 'upbram/myweb3'; // Replace with your GitHub username and repository name
+
+console.log("GITHUB_TOKEN:", GITHUB_TOKEN); // This should log your token or undefined
+//Check if the token is loaded correctly
+if (!GITHUB_TOKEN) {
+    console.error("GITHUB_TOKEN is not set. Please check your .env file.");
+    process.exit(1); // Exit the application if the token is not set
+}
 
 // POST route to handle form submissions
 app.post("/submit-interest", async (req, res) => {
