@@ -21,7 +21,7 @@ document.getElementById('interest-form').addEventListener('submit', async functi
         });
 
         const result = await response.json();
-        alert(result.message); // Show success message
+        alert('Thanks for the feedback'); // Show success message
         document.getElementById('interest-form').reset(); // Reset the form
     } catch (error) {
         console.error('Error:', error);
