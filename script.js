@@ -15,7 +15,7 @@ function submitInterest(event) {
         painPoint: feedback
     };
 
-    fetch('/submit-interest', {
+    fetch('http://localhost:3000/submit-interest', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
